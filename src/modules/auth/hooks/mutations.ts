@@ -25,7 +25,7 @@ export function useSignUpMutation() {
   return useMutation({
     mutationFn: (data: SignUpValues) => signUp(data),
     onMutate: () => console.log("Mutate"),
-    onSuccess: (res) => {
+    onSuccess: () => {
       window.location.href = "/sign-in";
     },
     onError: (error) => Notification("error", error?.message, ""),

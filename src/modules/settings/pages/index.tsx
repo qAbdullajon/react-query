@@ -3,7 +3,7 @@ import { Button } from "antd";
 import { useGetAdmin } from "../hooks/queries";
 import { removeAccessToken } from "@utils/token-service";
 import { useNavigate } from "react-router-dom";
-import { useDeleteSettings, useUpdateSettings } from "../hooks/mutations";
+import { useDeleteSettings } from "../hooks/mutations";
 import { useState } from "react";
 import SettingsModal from "./modal";
 const Settins = () => {
@@ -11,7 +11,6 @@ const Settins = () => {
   const navigate = useNavigate();
   const { data } = useGetAdmin();
   const { mutate: deleteSettings } = useDeleteSettings();
-  const { mutate: updateSettings } = useUpdateSettings();
   const handleCreate = () => {
     removeAccessToken();
     navigate("/sign-in");

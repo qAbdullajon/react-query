@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import SearchInput from "../../../components/search";
-import { Button, Image, Space, Tooltip } from "antd";
+import { Button, Image, Space } from "antd";
 import GlobalTable from "../../../components/table";
 import { useGetAdsQuery } from "../hooks/queries";
 import { useSearchParams } from "react-router-dom";

@@ -1,5 +1,5 @@
 import { Button, Form, Input, Modal } from "antd";
-import { useCreateDetail, useDeleteDetail, useUpdateDetail } from "../hooks/mutations";
+import { useCreateDetail, useUpdateDetail } from "../hooks/mutations";
 import { useEffect } from "react";
 
 const DetailModal = ({ open, handleCancel, update, id }: any) => {

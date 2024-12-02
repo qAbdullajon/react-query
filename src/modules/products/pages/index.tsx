@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GlobalTable, PopConfirmDelete, SearchInput } from "@components";
 import { Button, Space, Tooltip } from "antd";
 import { useNavigate, useSearchParams } from "react-router-dom";

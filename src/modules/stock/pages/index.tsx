@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SearchInput from "../../../components/search";
-import { Button, Space, Spin, Tooltip } from "antd";
+import { Button, Space, Tooltip } from "antd";
 import GlobalTable from "../../../components/table";
 import { EditOutlined } from "@ant-design/icons";
 import PopConfirmDelete from "../../../components/confirm-delete";
