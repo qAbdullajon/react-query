@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  &.bg {
+    background-color: #1677ff10;
+  }
+}
+.registr {
+  font-size: 17px;
+  display: flex;
+  gap: 8px;
+}
