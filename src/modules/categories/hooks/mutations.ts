@@ -42,7 +42,7 @@ export function useDeleteMuattion() {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (id: string | number) => deleteCategory(id),
-    onSuccess: (res) => Notification("success", "Successfully in delete category!", ""),
+    onSuccess: () => Notification("success", "Successfully in delete category!", ""),
     onSettled: async (_, error) => {
       if (error) {
         Notification("error", error?.message, "");

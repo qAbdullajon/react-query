@@ -1,5 +1,5 @@
 import { useQueryClient, useMutation } from "@tanstack/react-query";
-import { getStock, createStock, deleteStock, updateStock } from "../service";
+import { createStock, deleteStock, updateStock } from "../service";
 import { StockType } from "../types";
 import { Notification } from "@utils/notification";
 
