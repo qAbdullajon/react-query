@@ -40,5 +40,6 @@ const NotFound = loadabl(() => import("./not-found"), {
 const Detail = loadabl(() => import("./product-detail/pages"), {
   fallback: <LoadingSpin />,
 });
+import { ProtectedLayout, ProtectedAuth } from "./protected-route";
 
-export { SignInPage, SignUpPage, Layout, CategoriesPage, BrandsPage, ProductsPage, Detail, NotFound, SubCategory, BrandCategory, AdsPage, Stock, Settins };
+export { SignInPage, SignUpPage, Layout, CategoriesPage, BrandsPage, ProductsPage, Detail, NotFound, SubCategory, BrandCategory, AdsPage, Stock, Settins, ProtectedLayout, ProtectedAuth };

@@ -1,13 +1,27 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import App from "../App";
-import { SignInPage, SignUpPage, Layout, CategoriesPage, BrandsPage, ProductsPage, NotFound, SubCategory, BrandCategory, AdsPage, Stock, Settins, Detail } from "@modules";
+import { SignInPage, SignUpPage, Layout, CategoriesPage, BrandsPage, ProductsPage, NotFound, SubCategory, BrandCategory, AdsPage, Stock, Settins, Detail, ProtectedAuth, ProtectedLayout } from "@modules";
 const index = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<App />}>
-        <Route path="/sign-in" element={<SignInPage />} />
+        <Route
+          path="/sign-in"
+          element={
+            <ProtectedAuth>
+              <SignInPage />
+            </ProtectedAuth>
+          }
+        />
         <Route path="/sign-up" element={<SignUpPage />} />
-        <Route path="/" element={<Layout />}>
+        <Route
+          path="/"
+          element={
+            <ProtectedLayout>
+              <Layout />
+            </ProtectedLayout>
+          }
+        >
           <Route index element={<ProductsPage />} />
           <Route path="/product/:id" element={<Detail />} />
           <Route path="/categories" element={<CategoriesPage />} />
